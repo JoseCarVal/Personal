@@ -1,0 +1,69 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Encabezados */
+h1, h2 {
+  text-align: center;
+  color: #0d47a1;
+  margin-top: 20px;
+}
+
+/* Secciones */
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 700px;
+}
+
+/* Listas */
+ul, ol {
+  background: #f1f8e9;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+li {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* Contacto */
+#contacto ul {
+  background: #e3f2fd;
+}
+
+em {
+  color: #1565c0;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Pequeños detalles */
+section:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+/* Para que se vea centrado y ordenado */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer {
+  text-align: center;
+  background: #0288d1;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<title>Formulario sencillo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de preferencias</title>
+  <link rel="stylesheet" href="formulario.css">
 </head>
 <body>
-<h1>Formulario de preferencias</h1>
+  <main>
+    <form>
+      <div class="grid">
 
+        <!-- Pregunta 1 -->
+        <div class="card">
+          <p>¿Qué carrera te gusta?</p>
+          <img src="https://www.aauniv.com/s/blog/wp-content/uploads/2021/03/universidad-para-adultos-online-espanol.jpg" alt="Carrera">
+          <select name="carrera">
+            <option value="">Selecciona una opción</option>
+            <option>Ingeniería</option>
+            <option>Medicina</option>
+            <option>Derecho</option>
+            <option>Diseño</option>
+            <option>Economía</option>
+          </select>
+        </div>
 
-<!-- Pregunta 1 -->
-<p>¿Qué carrera te gusta?</p>
-<img src="https://www.aauniv.com/s/blog/wp-content/uploads/2021/03/universidad-para-adultos-online-espanol.jpg" alt="Carrera"><br>
-<select name="carrera">
-<option>Ingeniería</option>
-<option>Medicina</option>
-<option>Derecho</option>
-<option>Diseño</option>
-<option>Economía</option>
-</select>
+        <!-- Pregunta 2 -->
+        <div class="card">
+          <p>¿Messi o Cristiano?</p>
+          <img src="https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2017%2F03%2F16145151%2Fronaldo-messi.jpg?auth=c16473158a8ecdcf9a9636d88be4bb70e9100467f87ca152b3dbe522a9fc4dab&smart=true&width=992&height=558&quality=85" alt="Messi y Cristiano">
+          <label><input type="radio" name="jugador" value="Messi"> Messi</label><br>
+          <label><input type="radio" name="jugador" value="Cristiano"> Cristiano</label>
+        </div>
 
+        <!-- Pregunta 3 -->
+        <div class="card">
+          <p>¿Qué género de música escuchas?</p>
+          <img src="https://www.bupasalud.com/sites/default/files/styles/640_x_400/public/articulos/2024-09/fotos/por%20qu%C3%A9%20la%20m%C3%BAsica%20reduce%20el%20estr%C3%A9s-1.jpg?itok=8kIVL2_y" alt="Música">
+          <label><input type="checkbox" name="musica" value="Pop"> Pop</label><br>
+          <label><input type="checkbox" name="musica" value="Rock"> Rock</label><br>
+          <label><input type="checkbox" name="musica" value="Reggaeton"> Reggaetón</label>
+        </div>
 
-<!-- Pregunta 2 -->
-<p>¿Messi o Cristiano?</p>
-<img src="https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2017%2F03%2F16145151%2Fronaldo-messi.jpg?auth=c16473158a8ecdcf9a9636d88be4bb70e9100467f87ca152b3dbe522a9fc4dab&smart=true&width=992&height=558&quality=85" alt="Messi y Cristiano"><br>
-<input type="radio" name="jugador" value="Messi"> Messi
-<input type="radio" name="jugador" value="Cristiano"> Cristiano
+        <!-- Pregunta 4 -->
+        <div class="card">
+          <p>¿Qué edad tienes?</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Edad">
+          <input type="number" name="edad" placeholder="Ej. 20" min="1" max="100">
+        </div>
 
+        <!-- Pregunta 5 -->
+        <div class="card">
+          <p>¿Cuál es tu comida favorita?</p>
+          <img src="https://www.pimpamcook.es/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-12-at-15.58.03.jpeg" alt="Comida">
+          <input type="text" name="comida" placeholder="Ej. Pizza, ceviche...">
+        </div>
 
-<!-- Pregunta 3 -->
-<p>¿Qué género de música escuchas?</p>
-<img src="https://www.bupasalud.com/sites/default/files/styles/640_x_400/public/articulos/2024-09/fotos/por%20qu%C3%A9%20la%20m%C3%BAsica%20reduce%20el%20estr%C3%A9s-1.jpg?itok=8kIVL2_y" alt="Música"><br>
-<input type="checkbox" name="musica" value="Pop"> Pop
-<input type="checkbox" name="musica" value="Rock"> Rock
-<input type="checkbox" name="musica" value="Reggaeton"> Reggaeton
+      </div>
 
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
 
-<!-- Pregunta 4 -->
-<p>¿Qué edad tienes?</p>
-<input type="number" name="edad">
+  <footer>
+    <a href="index.html">Inicio</a>
+  </footer>
 
-<!-- Pregunta 5 -->
-<p>¿Cuál es tu comida favorita?</p>
-<img src="https://www.pimpamcook.es/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-12-at-15.58.03.jpeg" alt="Comida"><br>
-<input type="text" name="comida">
-
-
-<br><br>
-<input type="submit" value="Enviar">
 </body>
 </html>
