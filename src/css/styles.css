@@ -153,16 +153,22 @@ footer {
 .overlay-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.36);
+  /* ligera oscuridad cuando está abierto; por defecto completamente oculto */
+  background: rgba(0,0,0,0.18);
   z-index: 1100;
-  display: flex;
+  display: none; /* oculto por completo cuando está cerrado */
   align-items: stretch;
   justify-content: flex-start;
   opacity: 0;
-  transition: opacity .22s ease;
+  visibility: hidden;
+  transition: opacity .22s ease, visibility .22s step-start;
   pointer-events: none;
 }
-.overlay-backdrop.open { opacity: 1; pointer-events: auto; }
+.overlay-backdrop.open { display: flex; opacity: 1; visibility: visible; pointer-events: auto; }
+
+/* refuerzo: cuando el panel está cerrado, que esté totalmente desplazado y no reciba eventos */
+.overlay-panel { transform: translateX(-110%); pointer-events: none; }
+.overlay-backdrop.open .overlay-panel { transform: translateX(0); pointer-events: auto; }
 
 .overlay-panel {
   width: 300px;
@@ -179,8 +185,22 @@ footer {
 }
 .overlay-backdrop.open .overlay-panel { transform: translateX(0); }
 
-.overlay-panel ul { list-style: none; padding: 0; margin: 20px 0; }
-.overlay-panel li { margin: 12px 0; }
+.overlay-panel ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 20px 0;
+  /* override page styles that add background/shadow */
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* Overlay list items: explicitly reset (no background, no page padding) */
+.overlay-panel li {
+  margin: 12px 0;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
 .overlay-panel a { color: #fff; font-size: 1.1rem; text-decoration: none; display: block; padding: 8px 6px; border-radius: 6px; }
 .overlay-panel a:hover { background: rgba(255,255,255,0.05); }
 .overlay-panel .overlay-close { position: absolute; top: 8px; right: 10px; background: transparent; color: #fff; border: none; font-size: 1.8rem; cursor: pointer; }
@@ -189,3 +209,19 @@ footer {
   .overlay-panel a { font-size: 1rem; }
   .hamburger { left: 24px; top: 18px; }
 }
+
+/* GIF modal */
+.gif-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1200;
+}
+.gif-modal.open { display: flex; }
+.gif-modal-content { position: relative; background: transparent; padding: 8px; border-radius: 10px; max-width: 92%; max-height: 92%; }
+.gif-modal img { max-width: 100%; max-height: 80vh; display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+.gif-close { position: absolute; top: 6px; right: 8px; background: transparent; border: none; color: #fff; font-size: 1.8rem; cursor: pointer; z-index: 1201; }
+

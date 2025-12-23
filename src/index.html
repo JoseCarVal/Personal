@@ -6,6 +6,7 @@
   <title>Jose Carlos Valencia Vilcas</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/overlay.js" defer></script>
+  <script src="js/funcion.js" defer></script>
 </head>
 <body>
     <!-- Overlay navigation (backdrop + side panel) -->
@@ -36,6 +37,14 @@
   </section>
     <div class="centrado">
     <button class="boton">Haz clic aquí</button>
+  </div>
+
+  <!-- GIF modal (se muestra al hacer clic en el botón) -->
+  <div id="gif-modal" class="gif-modal" aria-hidden="true">
+    <div class="gif-modal-content" role="dialog" aria-modal="true" aria-label="Sorpresa GIF">
+      <button class="gif-close" aria-label="Cerrar">×</button>
+      <img id="gif-img" alt="Animación sorpresa">
+    </div>
   </div>
 </body>
 </html>
