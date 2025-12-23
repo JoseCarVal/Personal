@@ -3,7 +3,7 @@ const modal = document.getElementById("modal");
 const imgModal = document.getElementById("imgModal");
 
 const imagenes = [];
-for (let i = 1; i <= 20; i++) {
+for (let i = 1; i <= 18; i++) {
     imagenes.push(`imagenes/foto${i}.jpeg`);
 }
 
