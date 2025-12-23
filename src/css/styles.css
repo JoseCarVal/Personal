@@ -122,3 +122,70 @@ footer {
 .sombra {
   box-shadow: 5px 5px 15px gray;
 }
+
+/* Overlay panel (side) + backdrop */
+.hamburger {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 42px;
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 6px;
+  z-index: 1101;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #111;
+  border-radius: 3px;
+  transition: transform .3s ease, opacity .2s ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1){ transform: translateY(10px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2){ opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3){ transform: translateY(-10px) rotate(-45deg); }
+
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.36);
+  z-index: 1100;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  opacity: 0;
+  transition: opacity .22s ease;
+  pointer-events: none;
+}
+.overlay-backdrop.open { opacity: 1; pointer-events: auto; }
+
+.overlay-panel {
+  width: 300px;
+  max-width: 85%;
+  background: #0f1724;
+  color: #fff;
+  height: 100%;
+  padding: 22px 18px;
+  transform: translateX(-100%);
+  transition: transform .22s ease;
+  box-shadow: 3px 0 15px rgba(0,0,0,0.5);
+  overflow-y: auto;
+  position: relative;
+}
+.overlay-backdrop.open .overlay-panel { transform: translateX(0); }
+
+.overlay-panel ul { list-style: none; padding: 0; margin: 20px 0; }
+.overlay-panel li { margin: 12px 0; }
+.overlay-panel a { color: #fff; font-size: 1.1rem; text-decoration: none; display: block; padding: 8px 6px; border-radius: 6px; }
+.overlay-panel a:hover { background: rgba(255,255,255,0.05); }
+.overlay-panel .overlay-close { position: absolute; top: 8px; right: 10px; background: transparent; color: #fff; border: none; font-size: 1.8rem; cursor: pointer; }
+
+@media (min-width: 700px) {
+  .overlay-panel a { font-size: 1rem; }
+  .hamburger { left: 24px; top: 18px; }
+}

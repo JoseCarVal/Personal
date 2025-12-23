@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Galeria</title>
     <link rel="stylesheet" href="css/migaleria.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/migaleria.js" defer></script>
+    <script src="js/overlay.js" defer></script>
 </head>
 <body>
+    <!-- Overlay navigation (backdrop + side panel) -->
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="overlay-backdrop" class="overlay-backdrop" aria-hidden="true">
+      <nav id="overlay-nav" class="overlay-panel" aria-hidden="true" role="navigation" aria-label="Menú principal">
+        <button class="overlay-close" aria-label="Cerrar">×</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="SobreMi.html">Sobre mí</a></li>
+          <li><a href="migaleria.html">Galería</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="formulario.html">Formulario</a></li>
+        </ul>
+      </nav>
+    </div>
     <header id="inicio">
         <h1>Mi Galería</h1>
     </header>
@@ -24,8 +44,5 @@
     <div class="modal" id="modal" onclick="cerrarModal()">
         <img id="imgModal">
     </div>
-    <footer>
-        <a href="index.html">Inicio</a>
-    </footer>
 </body>
 </html>

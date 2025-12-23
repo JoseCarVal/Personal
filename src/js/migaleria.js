@@ -3,12 +3,12 @@ const modal = document.getElementById("modal");
 const imgModal = document.getElementById("imgModal");
 
 const imagenes = [];
-for (let i = 1; i <= 30; i++) {
+for (let i = 1; i <= 20; i++) {
     imagenes.push(`imagenes/foto${i}.jpeg`);
 }
 
-let visibles = 6;
-const incremento = 6;
+let visibles = 4;
+const incremento = 4;
 
 function cargarImagenes() {
     galeria.innerHTML = "";

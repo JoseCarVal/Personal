@@ -5,18 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jose Carlos Valencia Vilcas</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/overlay.js" defer></script>
 </head>
 <body>
+    <!-- Overlay navigation (backdrop + side panel) -->
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="overlay-backdrop" class="overlay-backdrop" aria-hidden="true">
+      <nav id="overlay-nav" class="overlay-panel" aria-hidden="true" role="navigation" aria-label="Menú principal">
+        <button class="overlay-close" aria-label="Cerrar">×</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="SobreMi.html">Sobre mí</a></li>
+          <li><a href="migaleria.html">Galería</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a href="formulario.html">Formulario</a></li>
+        </ul>
+      </nav>
+    </div>
     <header>
     <h1>Jose Carlos Valencia Vilcas</h1>
     <p>Mi página personal</p>
     </header>
-    <ol>
-      <li><a href="SobreMi.html">Sobre mí</a></li>
-      <li><a href="formulario.html">Formulario</a></li>
-      <li><a href="habilidades.html">Habilidades</a></li>
-      <li><a href="migaleria.html">Mi Galería</a></li>
-    </ol>
   <section id="introduccion">
     <h2>Introducción</h2>
     <p>Bienvenido a mi página personal. Aquí encontrarás información sobre mí, mis hobbies y cómo contactarme.</p>
@@ -24,6 +37,5 @@
     <div class="centrado">
     <button class="boton">Haz clic aquí</button>
   </div>
-
 </body>
 </html>
