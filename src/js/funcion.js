@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!btn || !modal || !modalImg) return;
 
+  const GIF_BASE = location.pathname.includes('/src/') ? 'gifs' : 'src/gifs';
+
   function showRandomGif() {
     const n = Math.floor(Math.random() * GIF_COUNT) + 1;
-    // Ruta esperada: imagenes/gifs/1.gif ... 10.gif
-    modalImg.src = `gifs/gif${n}.gif`;
+    modalImg.src = `${GIF_BASE}/gif${n}.gif`;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
