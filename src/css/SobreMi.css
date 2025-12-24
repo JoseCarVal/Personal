@@ -6,11 +6,44 @@ body {
   color: #333;
 }
 
-/* Encabezados */
-h1, h2 {
+/* Encabezado */
+header {
+  background: #f62004;
+  color: white;
   text-align: center;
-  color: #0d47a1;
-  margin-top: 20px;
+  padding: 60px 20px;
+  border-bottom: 5px solid #81c905;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 220px; /* ocupa más espacio vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Texto más amplio en encabezado */
+header .lead {
+  font-size: 1.1em;
+  margin-top: 12px;
+  max-width: none;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Secciones */
