@@ -1,0 +1,148 @@
+/* Estilos para MiEquipo */
+.equipo-header {
+  background: linear-gradient(135deg,#f62004,#b71c1c);
+  color: #fff;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-bottom: 5px solid #81c905;
+}
+.equipo-header .escudo {
+  width: 84px;
+  height: auto;
+  margin-bottom: 12px;
+}
+.equipo-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.equipo-header .subtitle {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Noticias */
+#noticias .bloque {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 18px;
+}
+#news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+#news-list li {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+#news-list a {
+  text-decoration: none;
+  color: #111;
+}
+#news-list .meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Estilo para items con miniatura */
+.news-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.news-item .thumb {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.news-item .news-content { max-width: calc(100% - 160px); }
+
+/* Estados de carga y error */
+.news-loading {
+  text-align: center;
+  color: #444;
+  font-style: italic;
+}
+.news-error {
+  text-align: center;
+  color: #b00000;
+}
+.news-error button {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #f62004;
+  color: #fff;
+  cursor: pointer;
+}
+.news-error button:hover { opacity: 0.9; }
+
+/* Botón para abrir la web oficial */
+.open-real, .open-link {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  color: #111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.open-real:hover, .open-link:hover { opacity: 0.9; }
+
+/* Champions (estático, sin API) */
+#champions-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 12px auto;
+}
+#champions-left { display:flex; flex-direction:column; align-items:center; gap:10px; }
+.escudo-large { width:120px; height:auto; }
+.badge { background: rgba(255,255,255,0.08); padding:12px 16px; border-radius:12px; text-align:center; color:#fff; }
+.badge-number { display:block; font-size:2rem; font-weight:800; }
+.badge-label { display:block; font-size:0.9rem; opacity:0.9; }
+#champions-right { flex:1; }
+.champ-desc { font-weight:600; margin-bottom:6px; }
+.champ-note { margin-bottom:10px; color:#444; }
+#champions-timeline { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:8px; }
+.chip { background:#fff; padding:8px 12px; border-radius:20px; font-weight:700; color:#111; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+.champ-years { font-size:0.95rem; color:#333; margin-top:8px; }
+.champ-photo { max-width:1000px; margin:14px auto 0; }
+.champ-photo img { width:100%; border-radius:8px; display:block; }
+
+@media (max-width:720px) {
+  #champions-card { flex-direction:column; align-items:center; }
+  .escudo-large { width:100px; }
+  #champions-right { width:100%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

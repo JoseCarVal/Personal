@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Equipo - Real Madrid</title>
+  <link rel="stylesheet" href="css/miequipo.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/miequipo.js" defer></script>
+</head>
+<body>
+  <!-- Overlay navigation (backdrop + side panel) -->
+  <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div id="overlay-backdrop" class="overlay-backdrop" aria-hidden="true">
+    <nav id="overlay-nav" class="overlay-panel" aria-hidden="true" role="navigation" aria-label="Menú principal">
+      <button class="overlay-close" aria-label="Cerrar">×</button>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="SobreMi.html">Sobre mí</a></li>
+        <li><a href="MiEquipo.html">Mi Equipo</a></li>
+        <li><a href="migaleria.html">Galería</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <header class="equipo-header">
+    <img class="escudo" src="https://images.seeklogo.com/logo-png/11/2/real-madrid-club-de-futbol-logo-png_seeklogo-116421.png" alt="Escudo Real Madrid">
+    <h1>Real Madrid</h1>
+    <p class="subtitle">Noticias y datos destacados del club</p>
+    <a class="open-real" href="https://es.wikipedia.org/wiki/Real_Madrid" target="_blank" rel="noopener">Ver en Wikipedia (es)</a>
+  </header>
+
+  <main>
+    <section id="noticias" class="bloque">
+      <h2>Noticias destacadas</h2>
+      <ul id="news-list">
+        <li>Cargando...</li>
+      </ul>
+    </section>
+    <section id="champions" class="bloque">
+      <h2>Champions League</h2>
+      <div id="champions-card">
+        <div id="champions-left">
+          <img class="escudo-large" src="https://images.seeklogo.com/logo-png/11/2/real-madrid-club-de-futbol-logo-png_seeklogo-116421.png" alt="Escudo Real Madrid">
+          <div class="badge" aria-hidden="true">
+            <span class="badge-number">15</span>
+            <span class="badge-label">Champions</span>
+          </div>
+        </div>
+        <div id="champions-right">
+          <p class="champ-desc">Número de títulos: <strong>15</strong> (visualización manual).</p>
+          <p class="champ-note">Línea de tiempo general con décadas y algunos años representativos en los que el club ganó la competición:</p>
+          <div id="champions-timeline">
+            <div class="chip">1950s</div>
+            <div class="chip">1960s</div>
+            <div class="chip">1990s–2000s</div>
+            <div class="chip">2010s</div>
+            <div class="chip">2020s</div>
+          </div>
+          <p class="champ-years">Ejemplos de años: 1956, 1957, 1958, 1959, 1960, 1966, 1998, 2000, 2002, 2014, 2016, 2017, 2018, 2022, 2025</p>
+        </div>
+      </div>
+      <div class="champ-photo">
+        <img src="https://www.foxsports.com.mx/resizer/v2/XK6HDQSHCRGTHDYHJ4L4VUMFBY.png?smart=true&auth=64fb3101c97cf8a53203e8fe0c7f072ba4b65eccd2e6d0546b487843ae7f0bf3&width=1200&height=675&quality=85" alt="Santiago Bernabéu">
+      </div>
+    </section>  </main>
+</body>
+</html>
